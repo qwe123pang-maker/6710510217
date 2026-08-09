@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+
+    font-family: "Kanit", sans-serif;
+
+    background:
+        radial-gradient(circle at top left, #4338ca 0%, transparent 35%),
+        radial-gradient(circle at bottom right, #0891b2 0%, transparent 35%),
+        #0f172a;
+
+    color: #f8fafc;
+}
+
+.profile-card {
+    width: min(620px, 100%);
+    padding: 42px 40px;
+    text-align: center;
+
+    background: rgba(15, 23, 42, 0.88);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 28px;
+
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.45);
+
+    backdrop-filter: blur(12px);
+
+    animation: showCard 0.7s ease;
+}
+
+.profile-icon {
+    width: 90px;
+    height: 90px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: linear-gradient(135deg, #6366f1, #06b6d4);
+
+    font-size: 28px;
+    font-weight: 700;
+
+    box-shadow: 0 10px 30px rgba(6, 182, 212, 0.3);
+}
+
+.tag {
+    color: #67e8f9;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+h1 {
+    margin-top: 8px;
+    font-size: clamp(30px, 6vw, 44px);
+    font-weight: 600;
+}
+
+.student-id {
+    margin-top: 4px;
+    color: #cbd5e1;
+    font-size: 17px;
+}
+
+.line {
+    width: 80px;
+    height: 4px;
+
+    margin: 22px auto 28px;
+
+    border-radius: 20px;
+
+    background: linear-gradient(90deg, #6366f1, #06b6d4);
+}
+
+.info {
+    display: grid;
+    gap: 14px;
+    text-align: left;
+}
+
+.info-box {
+    padding: 18px 20px;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 16px;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+.info-box:hover {
+    transform: translateX(6px);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.info-box h2 {
+    font-size: 17px;
+    font-weight: 500;
+    color: #94a3b8;
+}
+
+.info-box p {
+    margin-top: 2px;
+    font-size: 18px;
+    color: #f8fafc;
+}
+
+.btn {
+    display: inline-block;
+
+    margin-top: 28px;
+    padding: 12px 28px;
+
+    border-radius: 30px;
+
+    background: linear-gradient(135deg, #6366f1, #06b6d4);
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 17px;
+    font-weight: 500;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 28px rgba(6, 182, 212, 0.3);
+}
+
+@keyframes showCard {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 18px;
+    }
+
+    .profile-card {
+        padding: 32px 22px;
+    }
+
+    .info-box p {
+        font-size: 16px;
+    }
+}
